@@ -1,0 +1,76 @@
+/* Side Navigation
+
+@media (min-width: 768px)
+  .side-nav
+    position: fixed
+    top: 52px
+    left: 225px
+    width: 225px
+    margin-left: -225px
+    border: none
+    border-radius: 0
+    overflow-y: auto
+    background-color: $main_color
+    bottom: 0
+    overflow-x: hidden
+    padding-bottom: 40px
+    > li > a
+      width: 225px
+    li a
+      &:hover, &:focus
+        outline: none
+        background-color: $light_blue !important
+@media (max-width: 768px)
+  .navbar-form.navbar-right
+    display: none
+
+.side-nav > li > ul
+  padding: 0
+  > li > a
+    display: block
+    padding: 10px 15px 10px 38px
+    text-decoration: none
+    color: #999
+    &:hover
+      color: #fff
+.side-nav>li>ul>li>a
+  color: $dark_blue
+
+.navbar-inverse .navbar-nav > li > ul > li.active > a
+  background-color: $normal_blue
+
+.fa-alert-custom
+  content: ''
+  top: 0
+  left: 0
+  width: 20px
+  height: 20px
+  display: inline-block
+  border-radius: 50%
+  background-color: $red
+  text-align: center
+  font-size: 1em
+  vertical-align: top
+
+
+// navbar
+.navbar .navbar-toggle .icon-bar
+  color: $dark_blue
+.icon-bar
+  width: 22px
+  transition: all 0.2s
+.top-bar
+  transform: rotate(45deg)
+  transform-origin: 10% 10%
+.middle-bar
+  opacity: 0
+.bottom-bar
+  transform: rotate(-45deg)
+  transform-origin: 10% 90%
+.navbar-toggle.collapsed
+  .top-bar
+    transform: rotate(0)
+  .middle-bar 
+    opacity: 1
+  .bottom-bar
+    transform: rotate(0)

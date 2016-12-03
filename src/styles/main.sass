@@ -1,0 +1,86 @@
+.navbar-brand
+  margin-left: 50px
+  position: relative
+  padding: 15px 5px
+  transition: all 0.3s ease
+  &:hover
+    transform: scale(0.8)
+.navbar .navbar-brand
+  line-height: 20px
+  height: 50px
+  &::before
+    background: url('/images/epx_store_logo.svg') no-repeat
+    background-size: contain
+    content: ''
+    position: absolute
+    width: 110px
+    height: 90%
+    left: 0
+    top: 50%
+    transform: translateY(-50%)
+.navbar-inverse
+  background-color: $main_color
+  border: 0
+  border-bottom: 1px solid $dark_blue
+.navbar-inverse .navbar-nav>li>a,.top-nav > li > a,.navbar-inverse .navbar-brand
+  color: $dark_blue
+
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover,.top-nav>.open>a, .top-nav>.open>a:focus, .top-nav>.open>a:hover, .top-nav>li>a:focus,
+  background-color: $normal_blue
+.top-nav>li>a:hover
+  background-color: $light_blue
+.btn-primary
+  background-color: $normal_blue
+.fa
+  font-size: 1.3em
+.jumbotron
+  background-color: transparent
+.btn-primary
+  background-color: $normal_blue
+.navbar.navbar-inverse
+  background-color: $main_color
+.btn:not(.btn-raised):not(.btn-link):hover, .input-group-btn .btn:not(.btn-raised):not(.btn-link):hover, .btn:not(.btn-raised):not(.btn-link):focus, .input-group-btn .btn:not(.btn-raised):not(.btn-link):focus
+  background-color: $main_color
+  color: $normal_blue
+.btn:not(.btn-raised).btn-primary, .input-group-btn .btn:not(.btn-raised).btn-primary
+  color: $main_color
+.panel > .panel-heading, .panel.panel-default > .panel-heading
+  background-color: $main_color
+
+.btn, .thumbnail
+  border-radius: 0
+
+.caption a
+  padding: 10px
+.vertical_sub
+  vertical-align: sub
+
+#input-search::-webkit-input-placeholder
+  /* WebKit, Blink, Edge
+  color: $dark_blue
+#input-search:-moz-placeholder
+  /* Mozilla Firefox 4 to 18
+  color: $dark_blue
+  opacity: 1
+#input-search::-moz-placeholder
+  /* Mozilla Firefox 19+
+  color: $dark_blue
+  opacity: 1
+#input-search:-ms-input-placeholder
+  /* Internet Explorer 10-11
+  color: $dark_blue
+
+.navbar .navbar-collapse
+  box-shadow: 0px 12px 33px 2px rgba(255,255,255,0.56)
+body .container-fluid .jumbotron
+  box-shadow: none
+.navbar .navbar-form .form-group .form-control, .navbar .navbar-form .form-control
+  color: $dark_blue
+.navbar .navbar-form
+  margin-top: 10px
+li.message-preview
+  min-width: 205px
+  width: auto
+a-disp-inline-flex
+  display: inline-flex
