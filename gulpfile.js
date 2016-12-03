@@ -11,6 +11,7 @@ var minifycss = require('gulp-minify-css');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync');
 var fileinclude = require('gulp-file-include');
+var newer = require('gulp-newer');
 
 
 gulp.task('browser-sync', function() {
@@ -49,7 +50,7 @@ gulp.task('styles', function(){
 });
 
 gulp.task('scripts', function(){
-  return gulp.src('src/scripts/**/*.js')
+  return gulp.src('src/scripts/*.js')
     .pipe(plumber({
       errorHandler: function (error) {
         console.log(error.message);
@@ -64,6 +65,11 @@ gulp.task('scripts', function(){
     .pipe(gulp.dest('dist/scripts/'))
     .pipe(browserSync.reload({stream:true}));
 });
+gulp.task('copy', function() {
+	gulp.src('src/scripts/libs/**')
+	    .pipe(newer('dist/scripts/libs'))
+	    .pipe(gulp.dest('dist/scripts/libs'));
+});
 
 gulp.task('fileinclude', function() {
   gulp.src('./src/html/pages/*.html')
@@ -74,7 +80,7 @@ gulp.task('fileinclude', function() {
     .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('default', ['browser-sync'], function(){
+gulp.task('default', ['browser-sync','copy'], function(){
   gulp.watch("src/styles/**/*.sass", ['styles']);
   gulp.watch("src/scripts/**/*.js", ['scripts']);
   gulp.watch("src/html/**/*.html", ['fileinclude']);

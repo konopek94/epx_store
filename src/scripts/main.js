@@ -23,16 +23,16 @@ function changeContent(html){
   $(this).parent().addClass('active');
 }
 $('#a-register-new-app').click(function(){
-  changeContent('/register-new-app.html');
+  changeContent('register-new-app.html');
 });
 $('#a-all-apps').click(function(){
-  changeContent('/all-apps.html');
+  changeContent('all-apps.html');
 });
 $('#a-my-apps').click(function(){
-  changeContent('/my-apps.html');
+  changeContent('my-apps.html');
 });
 $('#a-waiting-apps').click(function(){
-  changeContent('/awaiting-apps.html');
+  changeContent('awaiting-apps.html');
 });
 // $('.a-metamodeler').on('click',function(){
 //   changeContent('/app-details.html');
