@@ -1,0 +1,114 @@
+
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    Application Services
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
+        <div class="row">
+
+          <div class="col-xs-12 col-md-3">
+            <div class="thumbnail">
+              <div class="caption">
+                <h3>EPXAuthAPI</h3>
+                <p>From EPX Platforms</p>
+                <p><small>author: </small>Adam Nowak</p>
+                <p><a href="" class="btn btn-default btn-full view-details" role="button" data-toggle="modal" data-target="#service-details">View Details</a></p>
+              </div>
+            </div>
+          </div>
+
+
+
+
+        </div>
+        <!-- /.row -->
+
+
+    </div>
+    <!-- /.container-fluid -->
+    <div id="service-details" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title">Service Details for EPXAuthAPI</h4>
+          </div>
+          <div class="modal-body">
+            <p> <strong>Description: </strong>Data access and authorization service.</p>
+            <p> <strong>ServiceURL: </strong>https://api.epx-platform.org/epxapi/</p>
+            <p> <strong>ServiceDescriptionURL: </strong>https://epxauth.components.epx.santos.pwr.edu.pl:444/swagger/docs/v1</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#service-dependency">Add Service Dependency</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="service-dependency" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title">Adding new service dependency</h4>
+          </div>
+          <div class="modal-body">
+            <form class="form-horizontal">
+              <fieldset>
+                <div class="form-group">
+                    <label for="selectLang" class="col-md-2 control-label">Select Version</label>
+                    <div class="col-md-10">
+                      <select id="selectVer" class="form-control">
+                      <option>v1</option>
+                      <option>v2</option>
+                      <option>v3</option>
+                      </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="selectLang" class="col-md-2 control-label">Select Application</label>
+                    <div class="col-md-10">
+                      <select id="selectApp" class="form-control">
+                      <option>app1</option>
+                      <option>app2</option>
+                      </select>
+                    </div>
+                </div>
+                <div class="form-group" style="margin-top: 0;"> <!-- inline style is just to demo custom css to put checkbox below input above -->
+                  <div class="col-md-offset-2 col-md-10">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox"> Required
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="textArea" class="col-md-2 control-label">Description</label>
+                  <div class="col-md-10">
+                    <textarea class="form-control" rows="3" id="textArea"></textarea>
+                    <span class="help-block">Please, fill the service dependency description</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-md-10 col-md-offset-2">
+                    <button type="button" class="btn btn-default"><a href="platform-apps.html">Cancel</a></button>
+                    <button type="submit" class="btn btn-primary">Add Dependency</button>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $.material.init();
+    </script>

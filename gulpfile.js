@@ -80,7 +80,7 @@ gulp.task('fileinclude', function() {
     .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('default', ['browser-sync','copy'], function(){
+gulp.task('default', ['browser-sync','copy','fileinclude','scripts','styles','images'], function(){
   gulp.watch("src/styles/**/*.sass", ['styles']);
   gulp.watch("src/scripts/**/*.js", ['scripts']);
   gulp.watch("src/html/**/*.html", ['fileinclude']);

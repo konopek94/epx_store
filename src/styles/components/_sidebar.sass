@@ -56,6 +56,12 @@
 
 
 // navbar
+@media (max-width: 767px)
+  #navbar-epx-collapse
+    width: 100%
+    text-align: right
+.navbar-right
+  float: right
 .navbar .navbar-toggle .icon-bar
   color: $dark_blue
 .icon-bar
@@ -76,3 +82,5 @@
     opacity: 1
   .bottom-bar
     transform: rotate(0)
+a
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1)
