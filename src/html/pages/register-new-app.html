@@ -19,6 +19,7 @@
                     <div class="col-md-10">
                       <input type="text" class="form-control" id="inputAppName" placeholder="Application Name" required>
                     </div>
+
                   </div>
                   <div class="form-group">
                     <label for="inputAppShortName" class="col-md-2 control-label">Application Short Name</label>
@@ -35,10 +36,17 @@
                     </div>
                   </div>
                   <div class="form-group" style="margin-top: 0;"> <!-- inline style is just to demo custom css to put checkbox below input above -->
-                    <div class="col-md-offset-2 col-md-10">
+                    <div class="col-md-offset-2 col-md-5">
                       <div class="checkbox">
                         <label>
                           <input type="checkbox"> Public
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-md-5">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox"> Secure Connection
                         </label>
                       </div>
                     </div>
@@ -56,14 +64,16 @@
                     </div>
                   </div>
                   <div class="form-group" style="margin-top: 0;"> <!-- inline style is just to demo custom css to put checkbox below input above -->
-                    <div class="col-md-offset-2 col-md-10">
-                      <div class="checkbox">
-                        <label>
-                          <input type="checkbox"> Secure Connection
-                        </label>
-                      </div>
+
+                  </div>
+                  <div class="form-group">
+                    <label for="inputScreens" class="col-md-2 control-label">Screens</label>
+                    <div class="col-md-10">
+                      <input type="text" readonly="" class="form-control" placeholder="Upload screens">
+                      <input type="file" id="inputScreens" multiple="true">
                     </div>
                   </div>
+
                   <div class="form-group">
                     <div class="col-md-10 col-md-offset-2">
                       <button type="button" class="btn btn-default"><a href="platform-apps.html">Cancel</a></button>
