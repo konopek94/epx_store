@@ -5,6 +5,32 @@
   display: inline-block
 .carousel-inner>.item>img, .img-responsive
   margin: auto
+
+.glyphicon_svg__left
+  left: 50%
+.glyphicon_svg__right
+  right: 50%
 @media (min-width: 768px)
   .carousel-inner>.item>img, .img-responsive
     height: 40vh
+.view-details
+  &::after
+    background: url('/images/details_icon.svg') no-repeat
+    background-size: contain
+    content: ''
+    position: absolute
+    width: 16px
+    height: 18px
+    right: -10px
+    top: 50%
+    transform: translateY(-50%)
+.modify-app
+  font-size: 0.6em
+.modify-app-smaller
+  font-size: 0.4em
+.btn-add-some
+  width: 20px
+  text-align: center
+.jumbotron
+  p
+    font-size: 1.3em

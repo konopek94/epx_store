@@ -34,6 +34,12 @@ $('#a-my-apps').click(function(){
 $('#a-waiting-apps').click(function(){
   changeContent('awaiting-apps.html');
 });
-// $('.a-metamodeler').on('click',function(){
-//   changeContent('/app-details.html');
-// });
+$('#a-app-services').click(function(){
+  changeContent('app-services.html');
+});
+
+
+//close navbar on mobile devices
+$('ul.nav.navbar-nav.side-nav li a.a-close').on('click', function() {
+    $('.navbar-toggle').click();
+});
