@@ -22,6 +22,7 @@ function changeContent(html){
   });
   $(this).parent().addClass('active');
 }
+
 $('#a-register-new-app').click(function(){
   changeContent('register-new-app.html');
 });
