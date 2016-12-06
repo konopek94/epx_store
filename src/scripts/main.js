@@ -1,3 +1,4 @@
+//change name app to shortname
 $('#inputAppName').focusout(function(){
   var firstText = $(this).val();
   console.log(firstText);
@@ -12,7 +13,7 @@ $('#inputAppName').focusout(function(){
 
 
 
-
+//change content .load()
 function changeContent(html){
   $('ul.nav.navbar-nav.side-nav').find("li.active").removeClass('active');
   $('#toLoad').fadeOut(0,function(){
@@ -22,6 +23,7 @@ function changeContent(html){
   });
   $(this).parent().addClass('active');
 }
+
 $('#a-register-new-app').click(function(){
   changeContent('register-new-app.html');
 });
