@@ -72,6 +72,9 @@ gulp.task('copy', function() {
     gulp.src('src/images/**')
 	    .pipe(newer('dist/images/'))
 	    .pipe(gulp.dest('dist/images/'));
+    gulp.src('src/styles/*.css')
+      .pipe(newer('dist/styles'))
+      .pipe(gulp.dest('dist/styles'));
 });
 
 gulp.task('fileinclude', function() {
