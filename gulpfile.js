@@ -69,6 +69,9 @@ gulp.task('copy', function() {
 	gulp.src('src/scripts/libs/**')
 	    .pipe(newer('dist/scripts/libs'))
 	    .pipe(gulp.dest('dist/scripts/libs'));
+    gulp.src('src/images/**')
+	    .pipe(newer('dist/images/'))
+	    .pipe(gulp.dest('dist/images/'));
 });
 
 gulp.task('fileinclude', function() {
@@ -80,7 +83,7 @@ gulp.task('fileinclude', function() {
     .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('default', ['browser-sync','copy','fileinclude','scripts','styles'], function(){
+gulp.task('default', ['browser-sync','copy','fileinclude','scripts','styles','images'], function(){
   gulp.watch("src/styles/**/*.sass", ['styles']);
   gulp.watch("src/scripts/**/*.js", ['scripts']);
   gulp.watch("src/html/**/*.html", ['fileinclude']);
