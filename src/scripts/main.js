@@ -45,3 +45,9 @@ $('#a-app-services').click(function(){
 $('ul.nav.navbar-nav.side-nav li a.a-close').on('click', function() {
     $('.navbar-toggle').click();
 });
+
+jQuery(document).ready(function($) {
+  $('.to-remove').on('click', function() {
+    $(this).fadeOut();
+  });
+});
